@@ -130,7 +130,16 @@
   }
   .navbar a img {
     height: 400%;
-    opacity: 0.5; 
+    opacity: 0.5;
+  }
+  .center {
+    text-align: center;
+  }
+  .logo {
+    margin-bottom: 40px;
+  }
+  .questions li {
+    margin: 8px 0; 
   }
   footer .glyphicon {
     font-size: 20px;
