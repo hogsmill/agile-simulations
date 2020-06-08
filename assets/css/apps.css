@@ -38,6 +38,16 @@
     color: #f4511e;
     font-size: 200px;
   }
+  .btn-default {
+    color: #ffffff;
+    background-color: #f4511e;
+    border-color: #f4511e;
+    }
+.btn-default:hover {
+    color: #f4511e;
+    background-color: #ffffff;
+    border-color: #f4511e;
+  }
   .thumbnail {
     padding: 0 0 15px 0;
     border: none;
@@ -139,7 +149,7 @@
     margin-bottom: 40px;
   }
   .questions li {
-    margin: 8px 0; 
+    margin: 8px 0;
   }
   footer .glyphicon {
     font-size: 20px;
