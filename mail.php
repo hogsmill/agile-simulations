@@ -1,7 +1,5 @@
 <?php
 
-// Temp Solution: Write messages to a file
-//
 $date = date("D M j G:i:s T Y");
 $action = $_GET["action"];
 $email = urldecode($_GET["email"]);
@@ -10,19 +8,13 @@ if ($action == "contact") {
   $comments = urldecode($_GET["comments"]);
 }
 
+$message = "date: $date\naction: $action\nemail: $email\ncomments: $comments\n"
 $f = fopen("mail.txt", "a") or die("Unable to open file!");
 
-fwrite($f, "-------------------------------\n");
-fwrite($f, "date: $date\n");
-fwrite($f, "action: $action\n");
-fwrite($f, "email:  $email\n");
-if ($action == "contact") {
-  fwrite($f, "comments:  $comments\n");
-}
+fwrite($f, $message);
 
 $to      = "info@hogsmill.com";
 $subject = "$action from agilesimulations.co.uk";
-$message = $comments;
 $headers = array(
     "From" => "info@agilesimulations.co.uk",
     "Reply-To" => "info@agilesimulations.co.uk",
