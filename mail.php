@@ -5,6 +5,7 @@
 $date = date("D M j G:i:s T Y");
 $action = $_GET["action"];
 $email = urldecode($_GET["email"]);
+$comments = "";
 if ($action == "contact") {
   $comments = urldecode($_GET["comments"]);
 }
@@ -19,14 +20,14 @@ if ($action == "contact") {
   fwrite($f, "comments:  $comments\n");
 }
 
-//$to      = "info@hogsmill.com";
-//$subject = "the subject";
-//$message = "hello";
-//$headers = array(
-//    "From" => "info@agilesimulations.co.uk",
-//    "Reply-To" => "info@agilesimulations.co.uk",
-//    "X-Mailer" => "PHP/" . phpversion()
-//);
-//
-//mail($to, $subject, $message, $headers);
+$to      = "info@hogsmill.com";
+$subject = "$action from agilesimulations.co.uk";
+$message = $comments;
+$headers = array(
+    "From" => "info@agilesimulations.co.uk",
+    "Reply-To" => "info@agilesimulations.co.uk",
+    "X-Mailer" => "PHP/" . phpversion()
+);
+
+mail($to, $subject, $message, $headers);
 ?>
