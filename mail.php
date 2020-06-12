@@ -5,10 +5,12 @@
 
 $action = $_GET["action"];
 $email = $_GET["email"];
+$date = date("D M j G:i:s T Y");
 
 $f = fopen("mail.txt", "a") or die("Unable to open file!");
 
 fwrite($f, "-------------------------------\n");
+fwrite($f, "date: $date\n");
 fwrite($f, "action: $action\n");
 fwrite($f, "email:  $email\n");
 
