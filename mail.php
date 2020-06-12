@@ -8,7 +8,7 @@ if ($action == "contact") {
   $comments = urldecode($_GET["comments"]);
 }
 
-$message = "date: $date\naction: $action\nemail: $email\ncomments: $comments\n"
+$message = "date: $date\naction: $action\nemail: $email\ncomments: $comments\n";
 $f = fopen("mail.txt", "a") or die("Unable to open file!");
 
 fwrite($f, $message);
