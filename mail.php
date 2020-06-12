@@ -2,7 +2,7 @@
 
 // Temp Solution: Write messages to a file
 //
-$data = urldecode($_GET["data"])
+$data = urldecode($_GET["data"]);
 
 $date = date("D M j G:i:s T Y");
 $action = $data["action"];
