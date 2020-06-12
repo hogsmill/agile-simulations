@@ -306,7 +306,7 @@ $(document).ready(function(){
 
   $('#subscribe').click( function() {
     $.ajax({
-        type: 'POST',
+        type: 'GET',
         url: "./mail.php",
         data: {
           action: 'subscribe',
