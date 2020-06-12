@@ -310,7 +310,7 @@ $(document).ready(function(){
         url: "./mail.php",
         data: {
           action: 'subscribe',
-          email: $('subscribe-email').val()
+          email: $('#subscribe-email').val()
         },
         success: function(i) {
           alert( "Thanks for subscribing - we'll be in touch shortly...")
