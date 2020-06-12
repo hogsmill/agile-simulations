@@ -2,13 +2,11 @@
 
 // Temp Solution: Write messages to a file
 //
-$data = urldecode($_GET["data"]);
-
 $date = date("D M j G:i:s T Y");
-$action = $data["action"];
-$email = $data["email"];
+$action = $_GET["action"];
+$email = urldecode($_GET["email"]);
 if ($action == "contact") {
-  $comments = $data["conmments"];
+  $comments = urldecode($_GET["conmments"]);
 }
 
 $f = fopen("mail.txt", "a") or die("Unable to open file!");
