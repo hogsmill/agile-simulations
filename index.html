@@ -299,7 +299,7 @@ $(document).ready(function(){
     $.ajax({
         type: 'GET',
         url: "./mail.php",
-        data: {data: encodeURIComponent(data)},
+        data: data,
         success: function(i) {
           alert(message)
         }
@@ -309,7 +309,7 @@ $(document).ready(function(){
   $('#subscribe').click( function() {
     post({
         action: 'subscribe',
-        email: $('#subscribe-email').val()
+        email: encodeURIComponent($('#subscribe-email').val())
       },
       "Thanks for subscribing - we'll be in touch shortly..."
     )
@@ -318,9 +318,9 @@ $(document).ready(function(){
   $('#contact').click( function() {
     post({
           action: 'contact',
-          name: $('#contact-name').val(),
-          email: $('#contact-email').val(),
-          comments: $('#contact-comments').val()
+          name: encodeURIComponent($('#contact-name').val()),
+          email: encodeURIComponent($('#contact-email').val()),
+          comments: encodeURIComponent($('#contact-comments').val())
         },
         "Thanks for contacting us - we'll be in touch shortly..."
     )
