@@ -6,7 +6,7 @@ $date = date("D M j G:i:s T Y");
 $action = $_GET["action"];
 $email = urldecode($_GET["email"]);
 if ($action == "contact") {
-  $comments = urldecode($_GET["conmments"]);
+  $comments = urldecode($_GET["comments"]);
 }
 
 $f = fopen("mail.txt", "a") or die("Unable to open file!");
@@ -16,7 +16,7 @@ fwrite($f, "date: $date\n");
 fwrite($f, "action: $action\n");
 fwrite($f, "email:  $email\n");
 if ($action == "contact") {
-  fwrite($f, "commecnts:  $email\n");
+  fwrite($f, "comments:  $comments\n");
 }
 
 //$to      = "info@hogsmill.com";
