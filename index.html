@@ -27,10 +27,6 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="assets/css/apps.css" rel="stylesheet" type="text/css">
-<!--
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
--->
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -61,14 +57,12 @@
 <div class="jumbotron text-center">
   <h1>Agile Simulations and Gamification</h1>
   <p>Remote gamification for the new normal...</p>
-  <!-- <form action="/mail.php"> -->
-    <div class="input-group">
-      <input type="email" id="subscribe-email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button id="subscribe" class="btn btn-danger">Subscribe</button>
-      </div>
+  <div class="input-group">
+    <input type="email" id="subscribe-email" class="form-control" size="50" placeholder="Email Address" required>
+    <div class="input-group-btn">
+      <button id="subscribe" class="btn btn-danger">Subscribe</button>
     </div>
-  <!-- </form> -->
+  </div>
 </div>
 
 <!-- Container (About Section) -->
@@ -240,16 +234,16 @@
     <div class="col-sm-7 slideanim">
       <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <input class="form-control" id="contact-name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <input class="form-control" id="contact-email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <textarea class="form-control" id="contact-comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+          <button id="contact" class="btn btn-default pull-right" type="submit">Send</button>
         </div>
       </div>
     </div>
@@ -264,9 +258,6 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
--->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script>
@@ -304,18 +295,35 @@ $(document).ready(function(){
     });
   });
 
-  $('#subscribe').click( function() {
+  function post(data, message) {
     $.ajax({
         type: 'GET',
         url: "./mail.php",
-        data: {
-          action: 'subscribe',
-          email: $('#subscribe-email').val()
-        },
+        data: {data: encodeURIComponent(data)},
         success: function(i) {
-          alert( "Thanks for subscribing - we'll be in touch shortly...")
+          alert(message)
         }
     });
+  }
+
+  $('#subscribe').click( function() {
+    post({
+        action: 'subscribe',
+        email: $('#subscribe-email').val()
+      },
+      "Thanks for subscribing - we'll be in touch shortly..."
+    )
+  });
+
+  $('#contact').click( function() {
+    post({
+          action: 'contact',
+          name: $('#contact-name').val(),
+          email: $('#contact-email').val(),
+          comments: $('#contact-comments').val()
+        },
+        "Thanks for contacting us - we'll be in touch shortly..."
+    )
   });
 })
 </script>
