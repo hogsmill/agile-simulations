@@ -27,8 +27,10 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="assets/css/apps.css" rel="stylesheet" type="text/css">
+<!--
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+-->
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -59,14 +61,14 @@
 <div class="jumbotron text-center">
   <h1>Agile Simulations and Gamification</h1>
   <p>Remote gamification for the new normal...</p>
-  <form action="/subscribe">
+  <!-- <form action="/mail.php"> -->
     <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <input type="email" id="subscribe-email" class="form-control" size="50" placeholder="Email Address" required>
       <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
+        <button id="subscribe" class="btn btn-danger">Subscribe</button>
       </div>
     </div>
-  </form>
+  <!-- </form> -->
 </div>
 
 <!-- Container (About Section) -->
@@ -261,6 +263,12 @@
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
 </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
@@ -295,8 +303,21 @@ $(document).ready(function(){
         }
     });
   });
+
+  $('#subscribe').click( function() {
+    $.ajax({
+        type: 'POST',
+        url: "./mail.php",
+        data: {
+          action: 'subscribe',
+          email: $('subscribe-email').val()
+        },
+        success: function(i) {
+          alert( "Thanks for subscribing - we'll be in touch shortly...")
+        }
+    });
+  });
 })
 </script>
-
 </body>
 </html>

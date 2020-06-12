@@ -43,7 +43,7 @@
     background-color: #f4511e;
     border-color: #f4511e;
     }
-.btn-default:hover {
+  .btn-default:hover {
     color: #f4511e;
     background-color: #ffffff;
     border-color: #f4511e;
@@ -147,6 +147,9 @@
   }
   .logo {
     margin-bottom: 40px;
+  }
+  #subscribe-message {
+    height: 30px;
   }
   .questions li {
     margin: 8px 0;
