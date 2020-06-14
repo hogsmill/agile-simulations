@@ -29,36 +29,304 @@
   <link href="assets/css/apps.css" rel="stylesheet" type="text/css">
 
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-  <nav class="navbar navbar-expand-lg navbar-light mb-4">
-    <a class="navbar-brand" href="http://agilesimulations.co.uk">
-      <img src="/lego.png" class="ml-4" height="38px" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item" :class="{ active: !showAbout }">
-          <a class="nav-link pointer" @click="showAbout = false"
-            >Simulation</a
-          >
-        </li>
-        <li class="nav-item" :class="{ active: showAbout }">
-          <a class="nav-link pointer" @click="showAbout = true">About</a>
-        </li>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">
+        <img src="/lego.png" />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#simulations">SIMULATIONS</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Agile Simulations and Gamification</h1>
+  <p>Remote gamification for the new normal...</p>
+  <div class="input-group">
+    <input type="email" id="subscribe-email" class="form-control" size="50" placeholder="Email Address" required>
+    <div class="input-group-btn">
+      <button id="subscribe" class="btn btn-danger">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Agile Sumulations</h2><br>
+      <h4>Like many Scrum Masters, Coaches, Facilitators and other agilists, we're
+          great fans of gamification to get agile points across. There's nothing
+          quite like getting the lego out to explore team dynamics or sitting
+          the C-suite round a table with a set of coins to demonstrate
+          outcome-driven delivery.</h4>
+
+      <h4>However, how do we facilitate these activities if, as looks likely, more
+        and more people will be working at home in the future? This is where
+        Agile Simulations comes in...</h4>
+    </div>
+    <div class="col-sm-4 center">
+      <span class="glyphicon glyphicon-blackboard logo"></span><br />
+      <button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4 center">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Answering (some) big agile questions</h2><br>
+      <h4><strong>The Reasoning Behind. </strong>
+        Now, these activities are great, but how do you do them with remote teams? how do you
+        get everybody involved if, as looks likely, more people will be working at home in the
+        future? Also, many of these activities, while convincing to some, can fall a bit flat
+        as the audience don't see them as relevant; either the roles and artefacts in the game
+        are not what are used in the company, or the audience are sceptical because they believe
+        the parameters have somehow been "fixed" to make the demonstration work.
+      </h4>
+    </div>
+   </div>
+   <div class="row">
+    <h4>This led us to explore the idea of writing software simulations of some of these activities
+      to address these issues. Hence Agile Simulations; a set of apps that run these games in a
+      browser to not only demonstrate the concepts, but also allow customisations to address
+      any scepticism.</h4>
+    <h4><strong>The Simulations. </strong>
+      The simulations, and the games they are based upon, are designed to try and answer some of the
+      big - although admittedly less frequently asked - questions in the agile realm.
+      Questions such as:
+      <ul class="questions">
+        <li>Is pairing better than not pairing, in terms of quality, cost and time to develop?</li>
+        <li>What is the best pairing strategy in a multi-skilled team? What is the best strategy
+          to acheive cross-functionality?</li>
+        <li>Why order the backlog by value if everything has to be delivered anyway?</li>
+        <li>What is the best strategy to approach work in an environment of interdependent teams?</li>
+        <li>Is the waste due to context switcing really a thing?</li>
+      </ul>
+    </h4>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="simulations" class="container-fluid text-center">
+  <h2>The Simulations</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-piggy-bank logo-small"></span>
+      <h4><a href='coin-game'>The Coin Game</a></h4>
+      <p>Explore different delivery strategies and see why delivering highest value
+        first is the best risk-reduction strategy. See this
+        <a href='https://www.linkedin.com/pulse/coin-game-simple-effective-way-demonstrate-agility-steve-wells/'>LinkedIn blog post</a>
+        for a full description, and details of how to faciltate in person.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4><a href='team-dependency-simulation'>Interdependent Teams</a></h4>
+      <p>In any reasonably sized organisation, there
+        will be dependencies between teams. So what is the best way to prioritise
+        cross-team work? See this video - <a href="https://vimeo.com/293167264/13f201d4f0">this video</a>
+        from Agile Cambridge 2017 for an explanation.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-duplicate logo-small"></span>
+      <h4><a href='pairing'>Pairing</a></h4>
+      <p>Pairing is usually touted in XP terms as a way to improve code quality through practices like
+        TDD. However, it is a great way to increase knowledge sharing, and therefor reducing risk
+        of silos, and for cementing a common vision, approach, goals and practices. But does it take
+        longer to develop using pairing? This simulation allows you to explore the true costs and
+        benefits of pairing.</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-ice-lolly-tasted logo-small"></span>
+      <h4><a href='context-switching'>Context Switching</a></h4>
+      <p>It is estimated that a 30 second interruption can cost an hour of
+        lost time, particularly for people working in high-knowledge areas
+        like software development or UI design. This simple simulation quickly
+        shows the effect of context-switching on performance.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-random logo-small"></span>
+      <h4><a href='context-switching'>Lego Flow</a></h4>
+      <p>The Lego Flow game has long been used to demonstrate different delivery approaches such
+        as batch, Scrum, Kanban, etc. It is a very immersive way of seeing - and doing - the
+        approaches using lego as an alternative to actual work. Thsi simulation aims to
+        re-capture the enegy and involvement of the game when everyone is remote.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-road logo-small"></span>
+      <h4><button class="btn btn-default btn-lg" onclick="document.location.href='/suggest';">Suggest a Game</button></h4>
+      <p>We are constantly on the lookout for games and simulations we can build
+        to bring the remote experience as close to the face-to-face one as we can.</p>
+      <p>Do get in touch if you any ideas or sugestions for new games or simulations
+        we could build.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="services" class="container-fluid text-center bg-grey">
+  <h2>Services</h2><br>
+  <h4>Need help? We can facilitate simulation sessions for you, or provide other
+    agile services based around these areas.</h4>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-blackboard logo-small"></span>
+      <h4><button class="btn btn-default btn-lg">Ask about Teaching</button></h4>
+      <p>If you want to run the simulations, each has it's own <em>About</em>
+        link which explains it. If you need further help, or want to discuss
+        how it might for you demo/session, feel free to get in touch and we
+        can provide further advice.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-bullhorn logo-small"></span>
+      <h4><button class="btn btn-default btn-lg">Ask about Facilitation</button></h4>
+      <p>If you would rather we facilitated the sessions for you, get in touch.
+        Whether it's a demo - to C-Suite or managers, or a larger audience - or an
+        activity involving partially or fully remote teams, we are happy to do this.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-calendar logo-small"></span>
+      <h4><button class="btn btn-default btn-lg">Ask about Coaching</button></h4>
+      <p>We do not provide full-time agile coaches, but we are happy to come in
+        and get you started on your agile journey using the simulations and other
+        materials to get the points across. We are happy to work on a cosultancy
+        basis, visiting on a regular basis to observe, review and suggest as you
+        continu on your transformation.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="container-fluid">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5 center">
+      <span class="glyphicon glyphicon-phone logo slideanim"></span>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="contact-name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="contact-email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="contact-comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button id="contact" class="btn btn-default pull-right">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+
+  function post(data, message) {
+    $.ajax({
+        type: 'GET',
+        url: "./mail.php",
+        data: data,
+        success: function(i) {
+          alert(message)
+        }
+    });
+  }
+
+  $('#subscribe').click( function() {
+    post({
+        action: 'subscribe',
+        email: encodeURIComponent($('#subscribe-email').val())
+      },
+      "Thanks for subscribing - we'll be in touch shortly..."
+    )
+  });
+
+  $('#contact').click( function() {
+    post({
+          action: 'contact',
+          name: encodeURIComponent($('#contact-name').val()),
+          email: encodeURIComponent($('#contact-email').val()),
+          comments: encodeURIComponent($('#contact-comments').val())
+        },
+        "Thanks for contacting us - we'll be in touch shortly..."
+    )
+  });
+
+})
+</script>
 </body>
 </html>
