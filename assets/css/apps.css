@@ -38,6 +38,12 @@
     color: #f4511e;
     font-size: 200px;
   }
+  button a {
+    color: #ffffff;
+  }
+  button a:hover {
+    text-decoration: none;
+  }
   .btn-default {
     color: #ffffff;
     background-color: #f4511e;
