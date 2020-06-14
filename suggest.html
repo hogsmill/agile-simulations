@@ -56,13 +56,13 @@
     <div class="col-sm-7">
       <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="contact-name" name="name" placeholder="Name" type="text" required>
+          <input class="form-control" id="suggest-name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="contact-email" name="email" placeholder="Email" type="email" required>
+          <input class="form-control" id="suggest-email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="contact-comments" name="comments" placeholder="Comment" rows="20"></textarea><br>
+      <textarea class="form-control" id="suggest-comments" name="comments" placeholder="Comment" rows="20"></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
           <button id="suggest" class="btn btn-default pull-right">Send</button>
@@ -97,8 +97,9 @@ $(document).ready(function(){
   $('#suggest').click( function() {
     post({
         action: 'suggest',
-        email: encodeURIComponent($('#subscribe-email').val()),
-        comments: encodeURIComponent($('#contact-comments').val())
+        name: encodeURIComponent($('#suggest-name').val()),
+        email: encodeURIComponent($('#suggest-email').val()),
+        comments: encodeURIComponent($('#suggest-comments').val())
       },
       "Thanks for your suggestion - we'll be in touch to discuss your exciting idea shortly..."
     )
