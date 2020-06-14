@@ -4,7 +4,7 @@ $date = date("D M j G:i:s T Y");
 $action = $_GET["action"];
 $email = urldecode($_GET["email"]);
 $comments = "";
-if ($action == "contact") {
+if ($action == "contact" || $action = "suggest") {
   $comments = urldecode($_GET["comments"]);
 }
 
