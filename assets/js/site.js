@@ -2,6 +2,7 @@
 function post(data, message) {
   var ok = true
   for (var key in data) {
+    data[key] = data[key].trim()
     if (!data[key] || 0 === data[key].length) {
       ok = false
     }
