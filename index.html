@@ -196,7 +196,7 @@
   <div class="row slideanim">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-blackboard logo-small"></span>
-      <h4><button class="btn btn-default btn-lg">Ask about Teaching</button></h4>
+      <h4><button class="btn btn-default btn-lg" onclick="document.location.href='/teaching.html'">Ask about Teaching</button></h4>
       <p>If you want to run the simulations, each has it's own <em>About</em>
         link which explains it. If you need further help, or want to discuss
         how it might for you demo/session, feel free to get in touch and we
@@ -205,14 +205,14 @@
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-bullhorn logo-small"></span>
-      <h4><button class="btn btn-default btn-lg">Ask about Facilitation</button></h4>
+      <h4><button class="btn btn-default btn-lg" onclick="document.location.href='/facilitation.html'">Ask about Facilitation</button></h4>
       <p>If you would rather we facilitated the sessions for you, get in touch.
         Whether it's a demo - to C-Suite or managers, or a larger audience - or an
         activity involving partially or fully remote teams, we are happy to do this.
       </p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-calendar logo-small"></span>
+      <span class="glyphicon glyphicon-calendar logo-small" onclick="document.location.href='/coaching.html'"></span>
       <h4><button class="btn btn-default btn-lg">Ask about Coaching</button></h4>
       <p>We do not provide full-time agile coaches, but we are happy to come in
         and get you started on your agile journey using the simulations and other
@@ -296,14 +296,24 @@ $(document).ready(function(){
   });
 
   function post(data, message) {
-    $.ajax({
-        type: 'GET',
-        url: "./mail.php",
-        data: data,
-        success: function(i) {
-          alert(message)
-        }
-    });
+    var ok = true
+    for (var key in data) {
+      if (!data[key] || 0 === data[key].length) {
+        ok = false
+      }
+    }
+    if (ok) {
+      alert('Please complete all fields')
+    } else {
+      $.ajax({
+          type: 'GET',
+          url: "./mail.php",
+          data: data,
+          success: function(i) {
+            alert(message)
+          }
+      })
+    }
   }
 
   $('#subscribe').click( function() {

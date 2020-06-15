@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169282102-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169282102-1');
+  </script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Agile Simulations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="assets/css/apps.css" rel="stylesheet" type="text/css">
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/lego.png" />
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Contact Section) -->
+<div class="container-fluid">
+  <h2 class="text-center">Coaching</h2>
+  <div class="row">
+    <div class="col-sm-5 center">
+      <span class="glyphicon glyphicon-phone logo"></span>
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="coaching-name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="coaching-email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="coaching-comments" name="comments" placeholder="Comment" rows="20"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button id="send" class="btn btn-default pull-right">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+
+  function post(data, message) {
+    var ok = true
+    for (var key in data) {
+      if (!data[key] || 0 === data[key].length) {
+        ok = false
+      }
+    }
+    if (ok) {
+      alert('Please complete all fields')
+    } else {
+      $.ajax({
+          type: 'GET',
+          url: "./mail.php",
+          data: data,
+          success: function(i) {
+            alert(message)
+            document.location.href='/index.html'
+          }
+      })
+    }
+  }
+
+  $('#go').click( function() {
+    post({
+        action: 'coaching',
+        name: encodeURIComponent($('#coaching-name').val()),
+        email: encodeURIComponent($('#coaching-email').val()),
+        comments: encodeURIComponent($('#coaching-comments').val())
+      },
+      "Thanks for your enquiry - we'll be in touch to discuss further shortly..."
+    )
+  });
+
+})
+</script>
+</body>
+</html>
