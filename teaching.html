@@ -86,9 +86,9 @@ $(document).ready(function(){
   $('#go').click( function() {
     post({
         action: 'teaching',
-        name: encodeURIComponent($('#teaching-name').val()),
-        email: encodeURIComponent($('#teaching-email').val()),
-        comments: encodeURIComponent($('#teaching-comments').val())
+        name: encodeURIComponent($('#teaching-name').val().trim()),
+        email: encodeURIComponent($('#teaching-email').val().trim()),
+        comments: encodeURIComponent($('#teaching-comments').val().trim())
       },
       "Thanks for your enquiry - we'll be in touch to discuss further shortly..."
     )
