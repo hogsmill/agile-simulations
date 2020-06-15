@@ -1,5 +1,7 @@
 <?php
 
+require_once('recaptchalib.php');
+
 $date = date("D M j G:i:s T Y");
 $action = $_GET["action"];
 $email = urldecode($_GET["email"]);
