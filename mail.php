@@ -1,6 +1,6 @@
 <?php
 
-require_once('recaptchalib.php');
+require_once('lib/recaptchalib.php');
 
 $date = date("D M j G:i:s T Y");
 $action = $_GET["action"];
