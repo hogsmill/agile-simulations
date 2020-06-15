@@ -102,9 +102,9 @@ $(document).ready(function(){
   $('#suggest').click( function() {
     post({
         action: 'suggest',
-        name: encodeURIComponent($('#suggest-name').val()),
-        email: encodeURIComponent($('#suggest-email').val()),
-        comments: encodeURIComponent($('#suggest-comments').val())
+        name: encodeURIComponent($('#suggest-name').val().trim()),
+        email: encodeURIComponent($('#suggest-email').val().trim()),
+        comments: encodeURIComponent($('#suggest-comments').val().trim())
       },
       "Thanks for your suggestion - we'll be in touch to discuss your exciting idea shortly..."
     )
