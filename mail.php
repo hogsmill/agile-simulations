@@ -5,7 +5,7 @@ require_once('lib/recaptchalib.php');
 $date = date("D M j G:i:s T Y");
 $action = $_GET["action"];
 $email = urldecode($_GET["email"]);
-$comments = "";
+$comments = "SUBSCRIBE";
 if ($action == "contact" || $action = "suggest") {
   $comments = urldecode($_GET["comments"]);
 }
@@ -23,5 +23,8 @@ $headers = array(
     "X-Mailer" => "PHP/" . phpversion()
 );
 
-mail($to, $subject, $message, $headers);
+if (!empty($comments)) {
+  mail($to, $subject, $message, $headers);
+}
+
 ?>
