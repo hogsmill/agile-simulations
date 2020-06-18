@@ -264,10 +264,15 @@
 <script>
 $(document).ready(function(){
 
+  // Hack to fix needing a scroll on 'back'
   var perfEntries = performance.getEntriesByType("navigation");
   for (var i = 0; i < perfEntries.length; i++) {
-    console.log(perfEntries[i].type);
+    if (perfEntries[i].type == 'back_forward') {
+      window.scrollBy(0, 1)
+      window.scrollBy(0, -1)
+    }
   }
+
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -289,13 +294,6 @@ $(document).ready(function(){
       });
     } // End if
   });
-
-  window.onhashchange = function() {
-    // Hack to fix needing a scroll on 'back'
-
-    window.scrollBy(0, 1)
-    window.scrollBy(0, -1)
-  }
 
   $(window).scroll(function() {
     $(".slideanim").each(function(){
