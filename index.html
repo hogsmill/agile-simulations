@@ -283,12 +283,14 @@ $(document).ready(function(){
         window.location.hash = hash;
       });
     } // End if
+  });
 
+  window.onhashchange = function() {
     // Hack to fix needing a scroll on 'back'
     window.scrollBy(0, 1)
     window.scrollBy(0, -1)
-  });
-
+  }
+  
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
