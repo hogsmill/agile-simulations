@@ -287,7 +287,10 @@ $(document).ready(function(){
 
   window.onhashchange = function() {
     // Hack to fix needing a scroll on 'back'
-    alert('here')
+    var perfEntries = performance.getEntriesByType("navigation");
+    for (var i = 0; i < perfEntries.length; i++) {
+      console.log(perfEntries[i].type);
+    }
     window.scrollBy(0, 1)
     window.scrollBy(0, -1)
   }
