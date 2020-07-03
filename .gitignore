@@ -24,11 +24,14 @@ Deployment Instructions.txt
 /ARCHIVE
 /data
 /coin-game
-/communications
+/communication
 /components
 /context-switching
 /do-others-work-first-js
+/health-check
 /lego-flow
+/mastermind
 /pairing-simulation-js
 /pig-racing
+/video
 /www

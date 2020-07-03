@@ -49,6 +49,10 @@
         <li><a href="#simulations">SIMULATIONS</a></li>
         <li><a href="#services">SERVICES</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <!--
+        <li><a id="signup" href="#">SIGN UP</a></li>
+        <li><a id="login" href="#">LOGIN</a></li>
+        -->
       </ul>
     </div>
   </div>
@@ -140,7 +144,7 @@
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4><a href='team-dependency-simulation'>Interdependent Teams</a></h4>
+      <h4><a href='team-dependency-simulation?walkThrough'>Interdependent Teams</a></h4>
       <p>In any reasonably sized organisation, there
         will be dependencies between teams. So what is the best way to prioritise
         cross-team work? See this video - <a href="https://vimeo.com/293167264/13f201d4f0">this video</a>
@@ -329,6 +333,14 @@ $(document).ready(function(){
         "Thanks for contacting us - we'll be in touch shortly..."
     )
   });
+
+  $('#signup').click(function() {
+    console.log('sign up')
+  })
+
+  $('#login').click(function() {
+    console.log('login')
+  })
 
 })
 </script>
