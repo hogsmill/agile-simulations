@@ -9,7 +9,6 @@ if ($action == "contact" || $action = "suggest") {
 }
 
 $message = "date: $date\naction: $action\nemail: $email\ncomments: $comments\n";
-echo $message
 
 $f = fopen("mail.txt", "a") or die("Unable to open file!");
 
