@@ -22,6 +22,9 @@ yarn-error.log*
 
 Deployment Instructions.txt
 /ARCHIVE
+/battleships
+/birthday-planning
+/change-management-game
 /data
 /coin-game
 /communication
@@ -31,6 +34,9 @@ Deployment Instructions.txt
 /health-check
 /lego-flow
 /mastermind
+/monte-carlo
+/no-estimates
+/no-estimates-game
 /pairing-simulation-js
 /pig-racing
 /video

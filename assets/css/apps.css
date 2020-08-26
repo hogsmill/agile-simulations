@@ -157,6 +157,18 @@
   .questions li {
     margin: 8px 0;
   }
+
+  .resources-table {
+    margin: 0 auto;
+    max-width: 75%;
+  }
+  .resources-table td {
+    text-align: left;
+  }
+  .resources-table span {
+    margin: 0 20px;
+  }
+
   footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
