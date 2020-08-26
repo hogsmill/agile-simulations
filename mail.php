@@ -1,7 +1,5 @@
 <?php
 
-require_once('lib/recaptchalib.php');
-
 $date = date("D M j G:i:s T Y");
 $action = $_GET["action"];
 $email = urldecode($_GET["email"]);
@@ -11,6 +9,8 @@ if ($action == "contact" || $action = "suggest") {
 }
 
 $message = "date: $date\naction: $action\nemail: $email\ncomments: $comments\n";
+echo $message
+
 $f = fopen("mail.txt", "a") or die("Unable to open file!");
 
 fwrite($f, $message);
