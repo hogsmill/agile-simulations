@@ -46,9 +46,9 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#simulations">GAMES AND SIMULATIONS</a></li>
+        <!-- <li><a href="#simulations">GAMES AND SIMULATIONS</a></li> -->
         <li><a href="#services">SERVICES</a></li>
-        <li><a href="#services">RESOURCES</a></li>
+        <li><a href="#resources">RESOURCES</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <!--
         <li><a id="signup" href="#">SIGN UP</a></li>
@@ -59,7 +59,7 @@
   </div>
 </nav>
 
-<div class="jumbotron text-center">
+<div class="hero jumbotron text-center">
   <h1>Agile Simulations and Gamification</h1>
   <p>Remote gamification for the new normal...</p>
   <div class="input-group">
@@ -68,6 +68,12 @@
       <button id="subscribe" class="btn btn-danger">Subscribe</button>
     </div>
   </div>
+  <ul class="subnav">
+    <li><a href="#activities">ICE BREAKERS AND AGILE ACTIVITIES</a></li>
+    <li><a href="#games">AGILE GAMES</a></li>
+    <li><a href="#workshops">WORKSHOPS</a></li>
+    <li><a href="#simulations">SIMULATIONS</a></li>
+  </ul>
 </div>
 
 <!-- Container (About Section) -->
@@ -136,25 +142,18 @@
   </div>
 </div>
 
-<!-- Container (Services Section) -->
-<div id="simulations" class="container-fluid text-center">
-  <h2>Games</h2>
-  <h4 class="games-header">All the games and simulations are highly interactive, and can be played in real-time across
-    any number of remote locations. Players play on their own machine which keeps them
-    engaged and interested. Hopefully, it's as close to playing round a table as you can get
-    online...</h4>
+<div id="activities" class="container-fluid text-center">
+  <h2>Ice Breakers and Agile Activities</h2>
   <div class="row slideanim">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-random logo-small"></span>
-      <h4 id="no-estimates"><a href='no-estimates?walkThrough'>No Estimates</a></h4>
-      <p>The No Estimates game allows you to explore, in a fun and competitive way, sources
-         of variation that render estimation inaccurate. It can be played by anything up to
-         50 people in 6 teams, and is an ideal way to get these concepts across to
-         managers or directors in a remote workshop environment. Ultimately, it
-         provides a more scientific approach to forecasting the question every PM asks -
-         "When will my stuff be delivered?.
+      <span class="glyphicon glyphicon-ice-lolly-tasted logo-small"></span>
+      <h4><a href='context-switching?walkThrough'>Context Switching</a></h4>
+      <p>It is estimated that a 30 second interruption can cost an hour of
+        lost time, particularly for people working in high-knowledge areas
+        like software development or UI design. This simple simulation quickly
+        shows the effect of context-switching on performance.
       </p>
-      <p><b>#noestimates</b></p>
+      <p><b>#contextswitching</b></p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-piggy-bank logo-small"></span>
@@ -168,18 +167,67 @@
       <p><b>#coingame</b></p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-ice-lolly-tasted logo-small"></span>
-      <h4><a href='context-switching?walkThrough'>Context Switching</a></h4>
-      <p>It is estimated that a 30 second interruption can cost an hour of
-        lost time, particularly for people working in high-knowledge areas
-        like software development or UI design. This simple simulation quickly
-        shows the effect of context-switching on performance.
+      <span class="glyphicon glyphicon-road logo-small"></span>
+      <h4><button class="btn btn-default btn-lg" onclick="document.location.href='/suggest.html';">Suggest an Activity</button></h4>
+      <p>We are constantly on the lookout for agile games and activities we can build
+        to bring the remote experience as close to the face-to-face one as we can.</p>
+      <p>Do get in touch if you any ideas or sugestions for games or activities
+        we could build.
       </p>
-      <p><b>#contextswitching</b></p>
     </div>
   </div>
+</div>
+
+<div id="games" class="container-fluid text-center">
+  <h2>Agile Games</h2>
+  <h4 class="games-header">All the games and simulations are highly interactive, and can be played in real-time across
+    any number of remote locations. Players play on their own machine which keeps them
+    engaged and interested. Hopefully, it's as close to playing round a table as you can get
+    online...</h4>
+  <div class="row slideanim">
+    <div class="col-sm-6">
+      <span class="glyphicon glyphicon-piggy-bank logo-small"></span>
+      <h4><a href='coin-game?walkThrough'>The Coin Game</a></h4>
+      <p>Explore different delivery strategies and see why delivering highest value
+        first is the best risk-reduction strategy. See this
+        <a href='https://www.linkedin.com/pulse/coin-game-simple-effective-way-demonstrate-agility-steve-wells/'>LinkedIn blog post</a>
+        for a full description, and details of how to faciltate in person. Probably th simplest way to
+        demonstrate an agile mindset, so perfect as an ice breaker for any group at any
+        level in the organisatin, from C-suite to dev team.</p>
+      <p><b>#coingame</b></p>
+    </div>
+    <div class="col-sm-6">
+      <span class="glyphicon glyphicon-bell logo-small"></span>
+      <h4><a href='battleships?walkThrough'>Agile Battleships</a></h4>
+      <p>The classic battleships game with an agile twist! Thsi version demonstrates the valuie of frequent and
+        early feedback; one of the players plays "waterfall" and only sees ehat theyve hit at the end of the game.
+        The pother plays "agile", and (as in the normal game) gets feedback on the success of every shot
+        immediately.</p>
+      <p><b>#agilebattleships</b></p>
+    </div>
+  </div>
+</div>
+
+<div id="workshops" class="container-fluid text-center">
+  <h2>Workshops</h2>
+  <div class="row slideanim">
+    <div class="col-sm-12">
+      <span class="glyphicon glyphicon-random logo-small"></span>
+      <h4 id="no-estimates"><a href='no-estimates?walkThrough'>No Estimates</a></h4>
+      <p>The No Estimates game allows you to explore, in a fun and competitive way, sources
+         of variation that render estimation inaccurate. It can be played by anything up to
+         50 people in 6 teams, and is an ideal way to get these concepts across to
+         managers or directors in a remote workshop environment. Ultimately, it
+         provides a more scientific approach to forecasting the question every PM asks -
+         "When will my stuff be delivered?.
+      </p>
+      <p><b>#noestimates</b></p>
+    </div>
+  </div>
+</div>
+
+<div id="simulations" class="container-fluid text-center">
   <h2>Simulations</h2>
-  <br>
   <div class="row slideanim">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-heart logo-small"></span>
@@ -199,6 +247,7 @@
         of silos, and for cementing a common vision, approach, goals and practices. But does it take
         longer to develop using pairing? This simulation allows you to explore the true costs and
         benefits of pairing.</p>
+        <p><b>#pairing</b></p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-road logo-small"></span>
@@ -253,20 +302,13 @@
   <p>Many of the simulations are explored in more detail in various blog posts, conference
     presentations, and elsewhere. Links to these are provided in a handy list below,
     along with some other relevant resources...</p>
-  <table class="resources-table">
-    <tr>
-      <td><span class="glyphicon glyphicon-piggy-bank logo-small"></span></td>
-      <td>Coin Game blog post on LinkedIn</td>
-      <td><span class="glyphicon glyphicon-heart logo-small"></span></td>
-      <td>Interdependent Teams simulation presentation at Agile Cambridge 2018</td>
-    </tr>
-    <tr>
-      <td><span class="glyphicon glyphicon-book logo-small"></span></td>
-      <td>An agile reading list</td>
-      <td><span class="glyphicon glyphicon-book logo-small"></span></td>
-      <td>Book post</td>
-    </tr>
-  </table>
+  <div class="resources">
+    <div class="resource"><a href='https://www.linkedin.com/pulse/coin-game-simple-effective-way-demonstrate-agility-steve-wells/' target="_blank">The Coin Game</a> blog post on LinkedIn</div>
+    <div class="resource"><a href="https://vimeo.com/293167264/13f201d4f0" target="_blank">Interdependent Teams simulation presentation</a> at Agile Cambridge 2018</div>
+    <div class="resource"><a href="https://drive.google.com/file/d/1sgzeWHz7re3T9llF7DfzIRmQodO9IZq2/view?usp=sharing" target="_blank">Agile Z-Day presentation</a> of the Coin Game and No Estimates</div>
+    <div class="resource">An <a hreff="https://www.linkedin.com/pulse/agile-reading-list-steve-wells/" target="_blank">agile reading list</a></div>
+    <div class="resource">Other interesting <a href="https://www.linkedin.com/in/hogsmill/detail/recent-activity/posts/" target="_blank">blog posts</a> on LinkedIn</div>
+  </div>
 </div>
 
 <!-- Container (Contact Section) -->
@@ -349,10 +391,6 @@ $(document).ready(function(){
           $(this).addClass("slide");
         }
     });
-  });
-
-  $("#lego-flow").click(function() {
-    alert("This is beng worked on - not ready yet, but very exciting so far...")
   });
 
   $('#subscribe').click(function() {

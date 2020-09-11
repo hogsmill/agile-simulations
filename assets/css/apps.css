@@ -24,7 +24,7 @@
   .jumbotron {
     background-color: #f4511e;
     color: #fff;
-    padding: 100px 25px;
+    padding: 100px 25px 6px 25px;
     font-family: Montserrat, sans-serif;
   }
   .container-fluid {
@@ -121,6 +121,7 @@
   }
   .navbar {
     margin-bottom: 0;
+    background-image: url(../assets/img/coins.png);
     background-color: #f4511e;
     z-index: 9999;
     border: 0;
@@ -145,6 +146,24 @@
     height: 400%;
     opacity: 0.5;
   }
+
+  .subnav {
+    text-align: center;
+    margin: 24px 0 18px 0;
+  }
+  .subnav li {
+    display: inline-block;
+    color: #fff;
+  }
+  .subnav li a {
+    padding: 12px 24px;
+    color: #fff;
+  }
+  .subnav li a:hover {
+    background-color: #fff;
+    color: #f4511e;
+    text-decoration: none;
+  }
   .center {
     text-align: center;
   }
@@ -158,15 +177,25 @@
     margin: 8px 0;
   }
 
-  .resources-table {
-    margin: 0 auto;
-    max-width: 75%;
+  .resources {
+    text-align: center;
   }
-  .resources-table td {
-    text-align: left;
+  .resource {
+    font-size: 19px;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+    width: 185px;
+    height: 160px;
+    padding: 12px;
+    margin: 24px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f4511e
   }
-  .resources-table span {
-    margin: 0 20px;
+  .resource a {
+    color: burlywood;
+    font-weight: bold;
   }
 
   footer .glyphicon {
@@ -225,5 +254,11 @@
     h4.games-header {
       width: 100%;
     }
+    .resource {
+      width: 100%;
+      margin: 6px;
+      height: auto;
+    }
+
   }
   </style>
