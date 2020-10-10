@@ -196,7 +196,12 @@
     color: burlywood;
     font-weight: bold;
   }
-
+  .LI-badge-container.horizontal.light .LI-logo {
+    position: absolute;
+    left: 0 !important;
+    right: auto !important;
+    bottom: 45px !important;
+  }
   footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
