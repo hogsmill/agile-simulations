@@ -169,6 +169,10 @@
   .logo {
     margin-bottom: 40px;
   }
+  .subscribe {
+    max-width: 400px;
+    margin: 0 auto;
+  }
   #subscribe-message {
     height: 30px;
   }
