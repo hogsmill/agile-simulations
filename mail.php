@@ -17,13 +17,15 @@ fwrite($f, $message);
 $to      = "info@hogsmill.com";
 $subject = "$action from agilesimulations.co.uk";
 $headers = array(
-    "From" => "info@agilesimulations.co.uk",
     "Reply-To" => "info@agilesimulations.co.uk",
     "X-Mailer" => "PHP/" . phpversion()
 );
 
+$email_from = "info@agilesimulations.co.uk";
+ini_set("sendmail_from", ""$email_from");
+
 if (!empty($comments)) {
-  mail($to, $subject, $message, $headers);
+  mail($to, $subject, $message, $headers, '-f'.$email_from);
 }
 
 ?>
