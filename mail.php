@@ -22,7 +22,8 @@ $headers = array(
 );
 
 $email_from = "info@agilesimulations.co.uk";
-ini_set("sendmail_from", ""$email_from");
+ini_set("SMTP", "websmtp.livemail.co.uk");
+ini_set("sendmail_from", "$email_from");
 
 if (!empty($comments)) {
   mail($to, $subject, $message, $headers, '-f'.$email_from);
