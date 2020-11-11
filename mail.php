@@ -3,6 +3,7 @@
 $date = date("D M j G:i:s T Y");
 $action = $_GET["action"];
 $email = urldecode($_GET["email"]);
+if ($_GET["comments"]) {
 $comments = urldecode($_GET["comments"]);
 
 $message = "----------------------------\ndate: $date\naction: $action\nemail: $email\ncomments: $comments\n";

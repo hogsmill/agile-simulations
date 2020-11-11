@@ -20,3 +20,8 @@ function post(data, message) {
     })
   }
 }
+
+function login() {
+  var href = encodeURIComponent(window.location.href)
+  window.location.href = "/login.html?" + href
+}
