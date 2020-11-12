@@ -41,6 +41,19 @@
     color: #f4511e;
     font-size: 200px;
   }
+  /* font awesome */
+
+  .section {
+    color: #f4511e;
+    font-size: 200px;
+    margin: 50px auto;
+  }
+  .section-icon {
+    font-size: 50px;
+    color: #f4511e;
+    margin: 10px auto;
+  }
+
   .btn-default {
     color: #ffffff;
     background-color: #f4511e;
