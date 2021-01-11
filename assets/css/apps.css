@@ -302,6 +302,9 @@
       width: 100%;
       margin-bottom: 35px;
     }
+    .equal-children, .equal-children .col-sm-6 {
+      display: block;
+    }
   }
   @media screen and (max-width: 480px) {
     .logo {
