@@ -193,11 +193,51 @@
     margin: 8px 0;
   }
 
+  .equal-children, .equal-children .col-sm-6 {
+    display: flex;
+  }
+
+  #pricing p, #pricing li {
+    text-align: left;
+  }
+
+  #pricing .pricing-panel {
+    border-radius: 30px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  #pricing .free {
+    border: 8px solid #f4511e;
+  }
+
+  #pricing .collaboration {
+    border-radius: 12px;
+    padding: 16px;
+    background-color: #f4511e;
+    color: #fff;
+  }
+
+  #pricing .collaboration a {
+    font-weight: bold;
+  }
+
+  #pricing .paid {
+    background-color: #f4511e;
+    color: #fff;
+  }
+
+  #pricing .paid h4, #pricing .paid .fas, #pricing .paid b,
+  #pricing .collaboration h4, #pricing .collaboration a {
+    color: #fff;
+  }
+
   .resources {
     text-align: center;
   }
   .resource {
     font-size: 19px;
+    line-height: 1.4;
     border-radius: 6px;
     text-align: center;
     color: #fff;
@@ -277,4 +317,3 @@
     }
 
   }
-  
