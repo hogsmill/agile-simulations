@@ -41,6 +41,26 @@
     color: #f4511e;
     font-size: 200px;
   }
+  .event-div {
+    font-size: large;
+    text-align: center;
+    height: 125px;
+    width: 640px;
+    padding: 12px 12px 12px 60px;
+    margin: 0 auto;
+    background-color: #ddd;
+    background-image: url("file:///C:/DATA/APPS/assets/img/eventbrite.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    box-shadow: 4px 4px 12px #888;
+  }
+  .event-div h4 {
+    font-weight: bold;
+  }
+
   /* font awesome */
 
   .section {
