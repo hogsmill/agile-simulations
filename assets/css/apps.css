@@ -60,6 +60,10 @@
   .event-div h4 {
     font-weight: bold;
   }
+  .event-div a {
+    font-weight: bold;
+    color: #f4511e;
+  }
 
   /* font awesome */
 
