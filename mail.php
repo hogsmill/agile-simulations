@@ -11,7 +11,7 @@ $f = fopen("mail.txt", "a") or die("Unable to open file!");
 
 fwrite($f, $message);
 
-$to      = "info@hogsmill.com";
+$to      = "info@agilesimulations.co.uk";
 $subject = "$action from agilesimulations.co.uk";
 $headers = array(
     "Reply-To" => "info@agilesimulations.co.uk",
