@@ -6,7 +6,7 @@
   h2 {
     font-size: 24px;
     text-transform: uppercase;
-    color: #555;
+    color: #555!important;
     font-weight: 600;
     margin-bottom: 30px;
     letter-spacing: 2px;
@@ -14,18 +14,21 @@
   h4 {
     font-size: 19px;
     line-height: 1.375em;
-    color: #555;
+    color: #555 !important;
     font-weight: 400;
     margin-bottom: 30px;
   }
   b, strong {
-    color: #555;
+    color: #555!important;
   }
   .jumbotron {
     background-color: #f4511e;
-    color: #fff;
+    color: #fff !important;
     padding: 100px 25px 6px 25px;
     font-family: Montserrat, sans-serif;
+  }
+  .jumbotron p {
+    color: #fff !important;
   }
   .container-fluid {
     padding: 60px 50px;
