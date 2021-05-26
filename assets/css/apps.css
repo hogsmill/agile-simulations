@@ -288,6 +288,10 @@
     -webkit-animation-duration: 1s;
     visibility: visible;
   }
+  .profile-badge--light {
+    margin: 12px auto 0 auto;  
+  }
+
   @keyframes slide {
     0% {
       opacity: 0;
