@@ -32,6 +32,7 @@ Deployment Instructions.txt
 /context-switching
 /do-others-work-first-js
 /health-check
+/interdependent-teams
 /jira
 /kanban
 /keep
@@ -43,11 +44,18 @@ Deployment Instructions.txt
 /monte-carlo
 /no-estimates
 /no-estimates-game
+/no-estimates-mobile
+/organisations and teams template
+/pipeline-game-3d
 /pairing-simulation-js
 /pig-racing
+/pipeline-game
 /planning-poker
 /socket-test
+/socket-test-new
 /survival
 /test-app
+/three.js
 /video
 /www
+/zoom
