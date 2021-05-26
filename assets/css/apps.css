@@ -231,6 +231,10 @@
   #pricing .collaboration h4, #pricing .collaboration a {
     color: #fff;
   }
+  #pricing .contact {
+    margin-top: 40px;
+    text-align: center;
+  }
 
   .resources {
     text-align: center;
