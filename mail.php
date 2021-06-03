@@ -9,7 +9,7 @@ $company = urldecode($_GET["company"]);
 $game = urldecode($_GET["game"]);
 $comments = urldecode($_GET["comments"]);
 
-$message = "----------------------------\ndate: $date\naction: $action\nname: $name\nemail: $email\nmobile: $mobile\ncompany: $company\ngame\n: $game\ncomments: $comments\n";
+$message = "----------------------------\ndate: $date\naction: $action\nname: $name\nemail: $email\nmobile: $mobile\ncompany: $company\ngame: $game\ncomments: $comments\n";
 
 $f = fopen("mail.txt", "a") or die("Unable to open file!");
 
